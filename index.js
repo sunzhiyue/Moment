@@ -1,4 +1,5 @@
+import React from 'react';
 import { AppRegistry } from 'react-native';
-import App from './App';
+import application from './App';
 
-AppRegistry.registerComponent('Moment', () => App);
+AppRegistry.registerComponent('Moment', () => application);
