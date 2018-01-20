@@ -24,10 +24,9 @@
 
 /*
  * Revision History:
- *     Initial: 2018/01/16        Feng Yifei
+ *     Initial: 2018/01/16        Sun Zhiyue
  */
 
 export const init = async () => {
-  console.log('init service');
   await true;
 };

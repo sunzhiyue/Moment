@@ -24,13 +24,5 @@
 
 /*
  * Revision History:
- *     Initial: 2018/01/16        Sun Zhiyue
+ *     Initial: 2018/01/20        Sun Zhiyue
  */
-
-import Main from './pages/Main';
-
-const Navigations = {
-  Main: { screen: Main },
-};
-
-export default Navigations;
