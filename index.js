@@ -27,8 +27,7 @@
  *     Initial: 2018/01/16        Sun Zhiyue
  */
 
-import React from 'react';
 import { AppRegistry } from 'react-native';
-import App from './app/pages/Main';
+import App from './app/index';
 
 AppRegistry.registerComponent('Moment', () => App);

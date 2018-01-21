@@ -24,50 +24,22 @@
 
 /*
  * Revision History:
- *     Initial: 2018/01/16        Sun Zhiyue
+ *     Initial: 2018/01/21        Sun Zhiyue
  */
 
-import { TabNavigator } from 'react-navigation';
+import React from 'react';
+import { Text, View } from 'react-native';
 
-import HomeScreen from './pages/Home';
-import FindScreen from './pages/Find';
-import PublishScreen from './pages/Publish';
-import LifeScreen from './pages/Life';
-import ProfleScreen from './pages/Profle';
-
-const RootTabs = TabNavigator({
-  Home: {
-    screen: HomeScreen,
-  },
-  Find: {
-    screen: FindScreen,
-  },
-  Publish: {
-    screen: PublishScreen,
-  },
-  Life: {
-    screen: LifeScreen,
-  },
-  Profle: {
-    screen: ProfleScreen,
-  },
-}, {
-  tabBarPosition: 'bottom',
-  showIcon: 'true',
-  tabBarOptions: {
-    activeTintColor: '#000',
-    inactiveTintColor: '#000',
-    labelStyle: {
-      fontSize: 10,
-    },
-    style: {
-      backgroundColor: '#fff',
-    },
-  },
-});
-
-const Navigations = {
-  Main: { screen: RootTabs },
-};
-
-export default Navigations;
+class FindScreen extends React.Component {
+  static navigationOptions = {
+    tabBarLabel: '我的',
+  }
+  render() {
+    return (
+      <View>
+        <Text>我的</Text>
+      </View>
+    );
+  }
+}
+export default FindScreen;

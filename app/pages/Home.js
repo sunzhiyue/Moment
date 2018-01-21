@@ -26,3 +26,27 @@
  * Revision History:
  *     Initial: 2018/01/20        Sun Zhiyue
  */
+
+import React from 'react';
+import { TabNavigator } from 'react-navigation';
+import { Text, View } from 'react-native';
+
+const HomeScreen = () => (
+  <View>
+    <Text>Home</Text>
+  </View>
+);
+const HotScreen = () => (
+  <View>
+    <Text>Hot</Text>
+  </View>
+);
+const RootNavigator = TabNavigator({
+  Home: {
+    screen: HomeScreen,
+  },
+  Hot: {
+    screen: HotScreen,
+  },
+});
+export default RootNavigator;
