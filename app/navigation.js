@@ -26,18 +26,29 @@
  * Revision History:
  *     Initial: 2018/01/16        Sun Zhiyue
  */
-
+import React from 'react';
 import { TabNavigator } from 'react-navigation';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 import HomeScreen from './pages/Home';
 import FindScreen from './pages/Find';
 import PublishScreen from './pages/Publish';
 import LifeScreen from './pages/Life';
-import ProfleScreen from './pages/Profle';
+import ProfileScreen from './pages/Profile';
 
 const RootTabs = TabNavigator({
   Home: {
     screen: HomeScreen,
+    navigationOptions: {
+      tabBarLabel: 'Home',
+      tabBarIcon: ({ tintColor, focused }) => (
+        <Icon
+          name={focused ? 'ios-home' : 'ios-home-outline'}
+          size={26}
+          style={{ color: tintColor }}
+        />
+      ),
+    },
   },
   Find: {
     screen: FindScreen,
@@ -49,11 +60,10 @@ const RootTabs = TabNavigator({
     screen: LifeScreen,
   },
   Profle: {
-    screen: ProfleScreen,
+    screen: ProfileScreen,
   },
 }, {
   tabBarPosition: 'bottom',
-  showIcon: 'true',
   tabBarOptions: {
     activeTintColor: '#000',
     inactiveTintColor: '#000',
@@ -63,6 +73,7 @@ const RootTabs = TabNavigator({
     style: {
       backgroundColor: '#fff',
     },
+    showIcon: 'true',
   },
 });
 

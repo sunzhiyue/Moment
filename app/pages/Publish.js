@@ -27,11 +27,19 @@
  *     Initial: 2018/01/21        Sun Zhiyue
  */
 import React from 'react';
+import Icon from 'react-native-vector-icons/Ionicons';
 import { Text, View } from 'react-native';
 
 class PublishScreen extends React.Component {
   static navigationOptions = {
-    tabBarLabel: '发布',
+    tabBarLabel: '-',
+    tabBarIcon: ({ tintColor, focused }) => (
+      <Icon
+        name={focused ? 'ios-add-circle' : 'ios-add-circle-outline'}
+        size={26}
+        style={{ color: tintColor }}
+      />
+    ),
   }
   render() {
     return (

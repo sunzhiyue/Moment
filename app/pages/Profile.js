@@ -28,11 +28,19 @@
  */
 
 import React from 'react';
+import Icon from 'react-native-vector-icons/Ionicons';
 import { Text, View } from 'react-native';
 
 class FindScreen extends React.Component {
   static navigationOptions = {
     tabBarLabel: '我的',
+    tabBarIcon: ({ tintColor, focused }) => (
+      <Icon
+        name={focused ? 'ios-person' : 'ios-person-outline'}
+        size={26}
+        style={{ color: tintColor }}
+      />
+    ),
   }
   render() {
     return (
