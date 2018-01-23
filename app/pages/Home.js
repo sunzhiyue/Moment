@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright (c) 2018 SmartestEE Co., Ltd.
+ * Copyright (c) 2018 SmartestEE Co., Ltd..
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -28,25 +28,58 @@
  */
 
 import React from 'react';
-import { TabNavigator } from 'react-navigation';
-import { Text, View } from 'react-native';
+import { Text, View, StyleSheet, ScrollView } from 'react-native';
+import { Header } from 'react-native-elements';
+import Icon from 'react-native-vector-icons/Ionicons';
 
-const HomeScreen = () => (
-  <View>
-    <Text>Home</Text>
-  </View>
-);
-const HotScreen = () => (
-  <View>
-    <Text>Hot</Text>
-  </View>
-);
-const RootNavigator = TabNavigator({
-  Home: {
-    screen: HomeScreen,
+class FindScreen extends React.Component {
+  static navigationOptions = {
+    header: null,
+    tabBarLabel: '首页',
+    tabBarIcon: ({ tintColor, focused }) => (
+      <Icon
+        name={focused ? 'ios-home' : 'ios-home-outline'}
+        size={26}
+        style={{ color: tintColor }}
+      />
+    ),
+  }
+  render() {
+    return (
+      <View
+        style={styles.viewPager}
+      >
+        <Header
+          backgroundColor="#fff"
+          centerComponent={{ text: '首页', style: { color: '#000' } }}
+        />
+        <ScrollView
+          horizontal
+          style={styles.icon}
+        >
+          <View>
+            <Icon name="ios-add-circle-outline" size={30} color="#000" />
+          </View>
+          <Text>创建聊天</Text>
+        </ScrollView>
+        <View style={styles.pageStyle} key="1">
+          <Text>First page</Text>
+        </View>
+        <View style={styles.pageStyle} key="2">
+          <Text>Second page</Text>
+        </View>
+      </View>
+    );
+  }
+}
+const styles = StyleSheet.create({
+  icon: {
+    width: 26,
+    height: 26,
   },
-  Hot: {
-    screen: HotScreen,
+  header: {
+    backgroundColor: '#000',
   },
 });
-export default RootNavigator;
+
+export default FindScreen;

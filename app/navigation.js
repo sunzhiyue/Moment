@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright (c) 2018 SmartestEE Co., Ltd.
+ * Copyright (c) 2018 SmartestEE Co., Ltd..
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -40,7 +40,7 @@ const RootTabs = TabNavigator({
   Home: {
     screen: HomeScreen,
     navigationOptions: {
-      tabBarLabel: 'Home',
+      tabBarLabel: '首页',
       tabBarIcon: ({ tintColor, focused }) => (
         <Icon
           name={focused ? 'ios-home' : 'ios-home-outline'}
@@ -72,6 +72,10 @@ const RootTabs = TabNavigator({
     },
     style: {
       backgroundColor: '#fff',
+      height: 56,
+    },
+    indicatorStyle: {
+      height: 0,
     },
     showIcon: 'true',
   },

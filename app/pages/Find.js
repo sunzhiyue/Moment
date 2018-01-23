@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright (c) 2018 SmartestEE Co., Ltd.
+ * Copyright (c) 2018 SmartestEE Co., Ltd..
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -29,10 +29,13 @@
 
 import React from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
+import { Header } from 'react-native-elements';
 import { Text, View } from 'react-native';
 
 class FindScreen extends React.Component {
   static navigationOptions = {
+    header: null,
+    headerRight: <Icon.Button name="ios-search-outline" backgroundColor="#fff" color="#000" />,
     tabBarLabel: '发现',
     tabBarIcon: ({ tintColor, focused }) => (
       <Icon
@@ -45,7 +48,10 @@ class FindScreen extends React.Component {
   render() {
     return (
       <View>
-        <Text>发现</Text>
+        <Header
+          backgroundColor="#fff"
+          centerComponent={{ text: '发现', style: { color: '#000' } }}
+        />
       </View>
     );
   }

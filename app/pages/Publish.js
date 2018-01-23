@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright (c) 2018 SmartestEE Co., Ltd.
+ * Copyright (c) 2018 SmartestEE Co., Ltd..
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -28,15 +28,16 @@
  */
 import React from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
+import { Header } from 'react-native-elements';
 import { Text, View } from 'react-native';
 
 class PublishScreen extends React.Component {
   static navigationOptions = {
-    tabBarLabel: '-',
+    header: null,
     tabBarIcon: ({ tintColor, focused }) => (
       <Icon
         name={focused ? 'ios-add-circle' : 'ios-add-circle-outline'}
-        size={26}
+        size={30}
         style={{ color: tintColor }}
       />
     ),
@@ -44,7 +45,10 @@ class PublishScreen extends React.Component {
   render() {
     return (
       <View>
-        <Text>1</Text>
+        <Header
+          backgroundColor="#fff"
+          centerComponent={{ text: '添加', style: { color: '#000' } }}
+        />
       </View>
     );
   }
