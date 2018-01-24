@@ -30,10 +30,11 @@
 import React from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { Header } from 'react-native-elements';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 
 class FindScreen extends React.Component {
   static navigationOptions = {
+    tabBarLabel: '生活',
     header: null,
     tabBarIcon: ({ tintColor, focused }) => (
       <Icon

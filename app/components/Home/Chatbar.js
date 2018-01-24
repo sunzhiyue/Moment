@@ -27,4 +27,39 @@
  *     Initial: 2018/01/21        Sun Zhiyue
  */
 import React from 'react';
-import { Text, View, StyleSheet, ScrollView } from 'react-native';
+import { Text, View, StyleSheet, Image } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
+
+import Color from '../../res/Colors';
+
+export default class Chatbar extends React.Component {
+  render() {
+    return (
+      <View style={styles.char}>
+        <View style={styles.userPhoto}>
+          <Image
+            source={{ uri: 'https://static1.hdwallpapers.net/wallpapers/2017/08/04/1135/thumb_multicolor-stripes.jpg' }}
+            style={{ width: 30, height: 30, borderRadius: 30 }}
+          />
+        </View>
+        <Text>asdasd</Text>
+        <View>
+          <Icon name="ios-radio-button-on" size={5} />
+        </View>
+      </View>
+    );
+  }
+}
+const styles = StyleSheet.create({
+  userPhoto: {
+    width: 26,
+    height: 26,
+  },
+  char: {
+    width: 160,
+    height: 100,
+    backgroundColor: Color.tintColor,
+    margin: 6,
+    borderRadius: 5,
+  },
+});

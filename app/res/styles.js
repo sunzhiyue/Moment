@@ -24,35 +24,23 @@
 
 /*
  * Revision History:
- *     Initial: 2018/01/21        Sun Zhiyue
+ *     Initial: 2018/01/24        Sun Zhiyue
  */
 
-import React from 'react';
-import Icon from 'react-native-vector-icons/Ionicons';
-import { Header } from 'react-native-elements';
-import { View } from 'react-native';
+import { Dimensions } from 'react-native';
 
-class FindScreen extends React.Component {
-  static navigationOptions = {
-    tabBarLabel: '我的',
-    header: null,
-    tabBarIcon: ({ tintColor, focused }) => (
-      <Icon
-        name={focused ? 'ios-person' : 'ios-person-outline'}
-        size={26}
-        style={{ color: tintColor }}
-      />
-    ),
-  }
-  render() {
-    return (
-      <View>
-        <Header
-          backgroundColor="#fff"
-          centerComponent={{ text: '我的', style: { color: '#000' } }}
-        />
-      </View>
-    );
-  }
-}
-export default FindScreen;
+const _width = 640;
+const _height = 1138;
+
+const Styles = {
+  ScreenWight: Dimensions.get('window').width,
+
+  Height: (x) => {
+    return x * Dimensions.get('window').height / _height; //eslint-disable-line
+  },
+  Width: (y) => {
+    return y * Dimensions.get('window').width / _width; //eslint-disable-line
+  },
+};
+
+export default Styles;

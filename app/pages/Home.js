@@ -32,6 +32,9 @@ import { Text, View, StyleSheet, ScrollView } from 'react-native';
 import { Header } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/Ionicons';
 
+import Color from '../res/Colors';
+import Chatbar from '../components/Home/Chatbar';
+
 class FindScreen extends React.Component {
   static navigationOptions = {
     header: null,
@@ -53,32 +56,40 @@ class FindScreen extends React.Component {
           backgroundColor="#fff"
           centerComponent={{ text: '首页', style: { color: '#000' } }}
         />
+        <View>
+          <Text style={styles.room}>推荐聊天室</Text>
+        </View>
         <ScrollView
           horizontal
-          style={styles.icon}
+          style={styles.scroll}
         >
-          <View>
-            <Icon name="ios-add-circle-outline" size={30} color="#000" />
+          <View style={styles.addchat}>
+            <Icon name="ios-add-circle-outline" size={50} color={Color.buttonColor} />
+            <Text>创建聊天</Text>
           </View>
-          <Text>创建聊天</Text>
+          <Chatbar />
+          <Chatbar />
+          <Chatbar />
         </ScrollView>
-        <View style={styles.pageStyle} key="1">
-          <Text>First page</Text>
-        </View>
-        <View style={styles.pageStyle} key="2">
-          <Text>Second page</Text>
-        </View>
       </View>
     );
   }
 }
 const styles = StyleSheet.create({
-  icon: {
-    width: 26,
-    height: 26,
+  scroll: {
+    height: 120,
   },
-  header: {
-    backgroundColor: '#000',
+  room: {
+    margin: 10,
+  },
+  addchat: {
+    margin: 6,
+    height: 100,
+    width: 80,
+    backgroundColor: Color.tintColor,
+    borderRadius: 5,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
 
