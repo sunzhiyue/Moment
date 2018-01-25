@@ -62,6 +62,7 @@ class FindScreen extends React.Component {
         <ScrollView
           horizontal
           style={styles.scroll}
+          showsHorizontalScrollIndicator={false}
         >
           <View style={styles.addchat}>
             <Icon name="ios-add-circle-outline" size={50} color={Color.buttonColor} />

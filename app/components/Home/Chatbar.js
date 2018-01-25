@@ -39,12 +39,13 @@ export default class Chatbar extends React.Component {
         <View style={styles.userPhoto}>
           <Image
             source={{ uri: 'https://static1.hdwallpapers.net/wallpapers/2017/08/04/1135/thumb_multicolor-stripes.jpg' }}
-            style={{ width: 30, height: 30, borderRadius: 30 }}
+            style={{ width: 30, height: 30, borderRadius: 15 }}
           />
         </View>
         <Text>asdasd</Text>
-        <View>
-          <Icon name="ios-radio-button-on" size={5} />
+        <View style={styles.}>
+          <Icon name="ios-radio-button-on" size={10} />
+          <Text>正在聊天</Text>
         </View>
       </View>
     );
@@ -54,6 +55,7 @@ const styles = StyleSheet.create({
   userPhoto: {
     width: 26,
     height: 26,
+    margin: 4,
   },
   char: {
     width: 160,
