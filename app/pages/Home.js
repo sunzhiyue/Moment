@@ -34,6 +34,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import Color from '../res/Colors';
 import Chatbar from '../components/Home/Chatbar';
+import Recommend from '../components/Home/Recommended';
 
 class FindScreen extends React.Component {
   static navigationOptions = {
@@ -71,6 +72,9 @@ class FindScreen extends React.Component {
           <Chatbar />
           <Chatbar />
           <Chatbar />
+        </ScrollView>
+        <ScrollView>
+          <Recommend />
         </ScrollView>
       </View>
     );

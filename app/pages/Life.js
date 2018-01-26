@@ -32,6 +32,8 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import { Header } from 'react-native-elements';
 import { View } from 'react-native';
 
+import LifeCarousel from '../components/Life/Notable';
+
 class FindScreen extends React.Component {
   static navigationOptions = {
     tabBarLabel: '生活',
@@ -51,6 +53,7 @@ class FindScreen extends React.Component {
           backgroundColor="#fff"
           centerComponent={{ text: '生活', style: { color: '#000' } }}
         />
+        <LifeCarousel />
       </View>
     );
   }

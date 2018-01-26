@@ -34,4 +34,5 @@ export default {
   buttonColor: '#529E69',
   musicBackground: 'rgba(77, 77, 77, 0.8)',
   fontColor: '#D0D0D0',
+  blackColor: '#000',
 };

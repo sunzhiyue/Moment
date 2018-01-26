@@ -24,14 +24,15 @@
 
 /*
  * Revision History:
- *     Initial: 2018/01/24        Sun Zhiyue
+ *     Initial: 2018/01/26        Sun Zhiyue
  */
 
-export default {
-  tiny: 8,
-  mini: 10,
-  small: 14,
-  standard: 18,
-  big: 22,
-  huge: 26,
+const image = {
+  slides: [
+    'https://static1.hdwallpapers.net/wallpapers/2015/08/22/873/thumb_milky-way-over-bow-lake-alberta-canada.jpg',
+    'https://static2.hdwallpapers.net/wallpapers/2015/03/24/548/thumb_impossible-is-nothing-muhammad-ali.jpg',
+    'https://static1.hdwallpapers.net/wallpapers/2015/08/22/873/thumb_milky-way-over-bow-lake-alberta-canada.jpg',
+    'https://static2.hdwallpapers.net/wallpapers/2016/03/01/986/thumb_starry-night-over-corsica.jpg',
+  ],
 };
+export default image;

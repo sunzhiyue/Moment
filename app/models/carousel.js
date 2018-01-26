@@ -24,14 +24,14 @@
 
 /*
  * Revision History:
- *     Initial: 2018/01/24        Sun Zhiyue
+ *     Initial: 2018/01/26        Sun Zhiyue
  */
+import Slides from '../res/img/Slides';
 
 export default {
-  tiny: 8,
-  mini: 10,
-  small: 14,
-  standard: 18,
-  big: 22,
-  huge: 26,
+  namespace: 'carousel',
+
+  state: {
+    slides: Slides.slides,
+  },
 };

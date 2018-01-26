@@ -24,14 +24,28 @@
 
 /*
  * Revision History:
- *     Initial: 2018/01/24        Sun Zhiyue
+ *     Initial: 2018/01/26        Sun Zhiyue
  */
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 
-export default {
-  tiny: 8,
-  mini: 10,
-  small: 14,
-  standard: 18,
-  big: 22,
-  huge: 26,
-};
+import Color from '../../res/Colors';
+import Dimension from '../../res/Styles';
+
+export default class Recommend extends React.Component {
+  render() {
+    return (
+      <View style={styles.shape}>
+        <View>
+          <Text>1</Text>
+        </View>
+      </View>
+    );
+  }
+}
+const styles = StyleSheet.create({
+  shape: {
+    backgroundColor: Color.tintColor,
+    width: Dimension.Width(640),
+  },
+});

@@ -31,21 +31,32 @@ import { Text, View, StyleSheet, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import Color from '../../res/Colors';
+import Font from '../../res/Fontsize';
 
 export default class Chatbar extends React.Component {
   render() {
     return (
-      <View style={styles.char}>
-        <View style={styles.userPhoto}>
-          <Image
-            source={{ uri: 'https://static1.hdwallpapers.net/wallpapers/2017/08/04/1135/thumb_multicolor-stripes.jpg' }}
-            style={{ width: 30, height: 30, borderRadius: 15 }}
-          />
+      <View style={styles.allChat}>
+        <View style={styles.chat} >
+          <View style={styles.userPhoto}>
+            <Image
+              source={{ uri: 'https://static1.hdwallpapers.net/wallpapers/2017/08/04/1135/thumb_multicolor-stripes.jpg' }}
+              style={{
+                width: 30,
+                height: 30,
+                borderRadius: 15,
+                marginRight: 4,
+              }}
+            />
+            <Text>asdasd</Text>
+          </View>
+          <View style={styles.chatState}>
+            <Icon name="ios-radio-button-on" size={10} color={Color.fontColor} />
+            <Text style={{ fontSize: Font.tiny, color: Color.fontColor }}>正在聊天</Text>
+          </View>
         </View>
-        <Text>asdasd</Text>
-        <View style={styles.}>
-          <Icon name="ios-radio-button-on" size={10} />
-          <Text>正在聊天</Text>
+        <View style={styles.chatContent}>
+          <Text style={{ fontSize: Font.small, color: Color.blackColor }} >。。......ha哈哈。</Text>
         </View>
       </View>
     );
@@ -53,15 +64,30 @@ export default class Chatbar extends React.Component {
 }
 const styles = StyleSheet.create({
   userPhoto: {
-    width: 26,
-    height: 26,
-    margin: 4,
+    height: 30,
+    margin: 10,
+    alignItems: 'center',
+    flexDirection: 'row',
   },
-  char: {
-    width: 160,
+  chat: {
+    flexDirection: 'row',
+  },
+  chatState: {
+    marginLeft: 30,
+    height: 36,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  allChat: {
+    flexDirection: 'column',
+    width: 190,
     height: 100,
     backgroundColor: Color.tintColor,
     margin: 6,
     borderRadius: 5,
+  },
+  chatContent: {
+    margin: 6,
+    height: 20,
   },
 });
