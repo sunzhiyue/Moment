@@ -24,54 +24,22 @@
 
 /*
  * Revision History:
- *     Initial: 2018/01/16        Sun Zhiyue
+ *     Initial: 2018/01/27        Sun Zhiyue
  */
-import { TabNavigator } from 'react-navigation';
 
-import HomeScreen from './pages/Home';
-import FindScreen from './pages/Find';
-import PublishScreen from './pages/Publish';
-import LifeScreen from './pages/Life';
-import ProfileScreen from './pages/Profile';
+import React from 'react';
+import { Text, View } from 'react-native';
 
-const RootTabs = TabNavigator({
-  Home: {
-    screen: HomeScreen,
-  },
-  Find: {
-    screen: FindScreen,
-  },
-  Publish: {
-    screen: PublishScreen,
-  },
-  Life: {
-    screen: LifeScreen,
-  },
-  Profle: {
-    screen: ProfileScreen,
-  },
-}, {
-  tabBarPosition: 'bottom',
-  lazy: 'true',
-  tabBarOptions: {
-    activeTintColor: '#000',
-    inactiveTintColor: '#000',
-    labelStyle: {
-      fontSize: 10,
-    },
-    style: {
-      backgroundColor: '#fff',
-      height: 56,
-    },
-    indicatorStyle: {
-      height: 0,
-    },
-    showIcon: 'true',
-  },
-});
-
-const Navigations = {
-  Main: { screen: RootTabs },
-};
-
-export default Navigations;
+class NearbyScreen extends React.Component {
+  static navigationOptions = {
+    tabBarLabel: '附近',
+  }
+  render() {
+    return (
+      <View>
+        <Text>附近</Text>
+      </View>
+    );
+  }
+}
+export default NearbyScreen;

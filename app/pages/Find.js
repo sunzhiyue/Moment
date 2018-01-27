@@ -31,29 +31,48 @@ import React from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { Header } from 'react-native-elements';
 import { View } from 'react-native';
+import { TabNavigator } from 'react-navigation';
 
-class FindScreen extends React.Component {
-  static navigationOptions = {
-    header: null,
-    headerRight: <Icon.Button name="ios-search-outline" backgroundColor="#fff" color="#000" />,
-    tabBarLabel: '发现',
-    tabBarIcon: ({ tintColor, focused }) => (
-      <Icon
-        name={focused ? 'ios-compass' : 'ios-compass-outline'}
-        size={26}
-        style={{ color: tintColor }}
-      />
-    ),
-  }
-  render() {
-    return (
-      <View>
-        <Header
-          backgroundColor="#fff"
-          centerComponent={{ text: '发现', style: { color: '#000' } }}
-        />
-      </View>
-    );
-  }
-}
-export default FindScreen;
+import NearbyScreen from './Nearby';
+import NewScreen from './New';
+
+// class FindScreen extends React.Component {
+//   static navigationOptions = {
+//     header: null,
+//     headerRight: <Icon.Button name="ios-search-outline" backgroundColor="#fff" color="#000" />,
+//     tabBarLabel: '发现',
+//     tabBarIcon: ({ tintColor, focused }) => (
+//       <Icon
+//         name={focused ? 'ios-compass' : 'ios-compass-outline'}
+//         size={26}
+//         style={{ color: tintColor }}
+//       />
+//     ),
+//   }
+//   render() {
+//     return (
+//       <View>
+//         <Header
+//           backgroundColor="#fff"
+//           centerComponent={{ text: '发现', style: { color: '#000' } }}
+//         />
+//       </View>
+//     );
+//   }
+// }
+const MyApp = TabNavigator({
+  Home: {
+    screen: NearbyScreen,
+  },
+  Notifications: {
+    screen: NewScreen,
+  },
+}, {
+  tabBarPosition: 'top',
+  animationEnabled: true,
+  tabBarOptions: {
+    activeTintColor: '#e91e63',
+  },
+});
+
+export default MyApp;
