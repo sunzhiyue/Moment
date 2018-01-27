@@ -49,10 +49,12 @@ class FindScreen extends React.Component {
   render() {
     return (
       <View>
-        <Header
-          backgroundColor="#fff"
-          centerComponent={{ text: '生活', style: { color: '#000' } }}
-        />
+        <View>
+          <Header
+            backgroundColor="#fff"
+            centerComponent={{ text: '生活', style: { color: '#000' } }}
+          />
+        </View>
         <LifeCarousel />
       </View>
     );

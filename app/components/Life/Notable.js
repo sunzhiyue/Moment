@@ -32,7 +32,7 @@ import { View, Image } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
 import { connect } from 'react-redux';
 
-import Dimension from '../../res/Styles';
+import Styles from '../../res/Styles';
 
 const renderSlide = ({ item }) => {
   return (
@@ -49,12 +49,12 @@ class LifeCarousel extends React.Component {
         <Carousel
           autoplay
           loop
-          autoplayDelay={4000}
-          autoplayInterval={4000}
+          autoplayDelay={3000}
+          autoplayInterval={3000}
           data={this.props.slides}
           renderItem={renderSlide}
-          sliderWidth={Dimension.ScreenWidth}
-          itemWidth={Dimension.ScreenWidth}
+          sliderWidth={Styles.ScreenWidth}
+          itemWidth={Styles.ScreenWidth}
         />
       </View>
     );
@@ -62,11 +62,11 @@ class LifeCarousel extends React.Component {
 }
 const styles = {
   carousel: {
-    height: Dimension.Height(330),
+    height: Styles.Height(330),
   },
   slide: {
-    width: Dimension.Width(640),
-    height: Dimension.Height(330),
+    width: Styles.Width(640),
+    height: Styles.Height(330),
   },
 };
 export default connect(({ carousel }) => ({ slides: carousel.slides }))(LifeCarousel);

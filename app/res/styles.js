@@ -33,7 +33,7 @@ const _width = 640;
 const _height = 1138;
 
 const Styles = {
-  ScreenWight: Dimensions.get('window').width,
+  ScreenWidth: Dimensions.get('window').width,
 
   Height: (x) => {
     return x * Dimensions.get('window').height / _height; //eslint-disable-line

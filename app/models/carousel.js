@@ -26,12 +26,12 @@
  * Revision History:
  *     Initial: 2018/01/26        Sun Zhiyue
  */
-import Slides from '../res/img/Slides';
+import Image from '../res/img/Slides';
 
 export default {
   namespace: 'carousel',
 
   state: {
-    slides: Slides.slides,
+    slides: Image.slides,
   },
 };

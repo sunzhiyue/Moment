@@ -27,12 +27,11 @@
  *     Initial: 2018/01/26        Sun Zhiyue
  */
 
-const image = {
+const Image = {
   slides: [
-    'https://static1.hdwallpapers.net/wallpapers/2015/08/22/873/thumb_milky-way-over-bow-lake-alberta-canada.jpg',
-    'https://static2.hdwallpapers.net/wallpapers/2015/03/24/548/thumb_impossible-is-nothing-muhammad-ali.jpg',
-    'https://static1.hdwallpapers.net/wallpapers/2015/08/22/873/thumb_milky-way-over-bow-lake-alberta-canada.jpg',
-    'https://static2.hdwallpapers.net/wallpapers/2016/03/01/986/thumb_starry-night-over-corsica.jpg',
+    'https://images.unsplash.com/photo-1490365728022-deae76380607?ixlib=rb-0.3.5&s=cd0352c4c74192651e42f1949116e5fa&auto=format&fit=crop&w=967&q=80',
+    'https://images.unsplash.com/photo-1508141701145-f7f5d95c7c3d?ixlib=rb-0.3.5&s=f6bc9cfa9419c4f4cc2eba39191c9837&auto=format&fit=crop&w=700&q=80',
+    'https://images.unsplash.com/photo-1502988632461-f68f5b4f415a?ixlib=rb-0.3.5&s=ebe94070863085e5b20d94a618f96518&auto=format&fit=crop&w=634&q=80',
   ],
 };
-export default image;
+export default Image;
