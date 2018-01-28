@@ -30,49 +30,48 @@
 import React from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { Header } from 'react-native-elements';
-import { View } from 'react-native';
-import { TabNavigator } from 'react-navigation';
+import { View, Text } from 'react-native';
+// import { TabNavigator } from 'react-navigation';
+import ScrollableTabView, { DefaultTabBar } from 'react-native-scrollable-tab-view';
 
-import NearbyScreen from './Nearby';
-import NewScreen from './New';
+// import NearbyScreen from './Nearby';
+// import NewScreen from './New';
 
-// class FindScreen extends React.Component {
-//   static navigationOptions = {
-//     header: null,
-//     headerRight: <Icon.Button name="ios-search-outline" backgroundColor="#fff" color="#000" />,
-//     tabBarLabel: '发现',
-//     tabBarIcon: ({ tintColor, focused }) => (
-//       <Icon
-//         name={focused ? 'ios-compass' : 'ios-compass-outline'}
-//         size={26}
-//         style={{ color: tintColor }}
-//       />
-//     ),
-//   }
-//   render() {
-//     return (
-//       <View>
-//         <Header
-//           backgroundColor="#fff"
-//           centerComponent={{ text: '发现', style: { color: '#000' } }}
-//         />
-//       </View>
-//     );
-//   }
-// }
-const MyApp = TabNavigator({
-  Home: {
-    screen: NearbyScreen,
-  },
-  Notifications: {
-    screen: NewScreen,
-  },
-}, {
-  tabBarPosition: 'top',
-  animationEnabled: true,
-  tabBarOptions: {
-    activeTintColor: '#e91e63',
-  },
-});
+class FindScreen extends React.Component {
+  static navigationOptions = {
+    header: null,
+    headerRight: <Icon.Button name="ios-search-outline" backgroundColor="#fff" color="#000" />,
+    tabBarLabel: '发现',
+    tabBarIcon: ({ tintColor, focused }) => (
+      <Icon
+        name={focused ? 'ios-compass' : 'ios-compass-outline'}
+        size={26}
+        style={{ color: tintColor }}
+      />
+    ),
+  }
+  render() {
+    return (
+      // <View>
+      //   <Header
+      //     backgroundColor="#fff"
+      //     centerComponent={{ text: '发现', style: { color: '#000' } }}
+      //   />
+      // </View>
+      <ScrollableTabView
+        scrollWithoutAnimation
+        style={{ marginVertical: 10 }}
+        locked={false}
+        tabBarUnderlineStyle={{ backgroundColor: '#000' }}
+        initialPage={1}
+        renderTabBar={() => <DefaultTabBar />}
+      >
+        <View tabLabel="最新"><Text>2</Text></View>
+        <Text tabLabel="附近">favorite</Text>
+      </ScrollableTabView>
+    );
+  }
+}
 
-export default MyApp;
+
+export default FindScreen;

@@ -29,8 +29,35 @@
 
 import React from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
-import { Header } from 'react-native-elements';
+import { Header, List, ListItem, PricingCard } from 'react-native-elements';
 import { View } from 'react-native';
+
+const list = [
+  {
+    title: '消息',
+    icon: 'ios-notifications-outline',
+  },
+  {
+    title: '收录',
+    icon: 'ios-bookmark-outline',
+  },
+  {
+    title: '点赞',
+    icon: 'ios-thumbs-up-outline',
+  },
+  {
+    title: '购物',
+    icon: 'ios-albums-outline',
+  },
+  {
+    title: '下载',
+    icon: 'ios-download-outline',
+  },
+  {
+    title: '草稿',
+    icon: 'ios-filing-outline',
+  },
+];
 
 class FindScreen extends React.Component {
   static navigationOptions = {
@@ -50,6 +77,24 @@ class FindScreen extends React.Component {
         <Header
           backgroundColor="#fff"
           centerComponent={{ text: '我的', style: { color: '#000' } }}
+        />
+        <List>
+          {
+            list.map((item, i) => (
+              <ListItem
+                key={{ i }}
+                title={item.title}
+                leftIcon={<Icon name={item.icon} size={26} style={{ margin: 6 }} />}
+              />
+            ))
+          }
+        </List>
+        <PricingCard
+          color="#4f9deb"
+          title="Free"
+          price="$0"
+          info={['1 User', 'Basic Support', 'All Core Features']}
+          button={{ title: 'GET STARTED', icon: 'flight-takeoff' }}
         />
       </View>
     );
