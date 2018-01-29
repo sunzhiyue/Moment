@@ -35,6 +35,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import Color from '../res/Colors';
 import Chatbar from '../components/Home/Chatbar';
 import Recommend from '../components/Home/Recommended';
+import Advertisement from '../components/Home/Advertisement';
 
 class FindScreen extends React.Component {
   static navigationOptions = {
@@ -57,24 +58,24 @@ class FindScreen extends React.Component {
           backgroundColor="#fff"
           centerComponent={{ text: '首页', style: { color: '#000' } }}
         />
-        <View>
-          <Text style={styles.room}>推荐聊天室</Text>
-        </View>
-        <ScrollView
-          horizontal
-          style={styles.scroll}
-          showsHorizontalScrollIndicator={false}
-        >
-          <View style={styles.addchat}>
-            <Icon name="ios-add-circle-outline" size={50} color={Color.buttonColor} />
-            <Text>创建聊天</Text>
-          </View>
-          <Chatbar />
-          <Chatbar />
-          <Chatbar />
-        </ScrollView>
         <ScrollView>
-          <Recommend />
+          <View>
+            <Text style={styles.room}>推荐聊天室</Text>
+          </View>
+          <ScrollView
+            horizontal
+            style={styles.scroll}
+            showsHorizontalScrollIndicator={false}
+          >
+            <View style={styles.addchat}>
+              <Icon name="ios-add-circle-outline" size={50} color={Color.buttonColor} />
+              <Text>创建聊天</Text>
+            </View>
+            <Chatbar />
+            <Chatbar />
+            <Chatbar />
+          </ScrollView>
+          <Advertisement />
         </ScrollView>
       </View>
     );
